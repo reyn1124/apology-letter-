@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffe8ef">
+<title>To My Wifey 💗</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+:root{--pink:#e8799a;--deep:#a83f65;--cream:#fffaf8;--ink:#5e3946}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:'DM Sans',sans-serif;color:var(--ink);background:radial-gradient(circle at 15% 15%,#fff 0 3%,transparent 25%),linear-gradient(135deg,#fff2f5,#f9dce7 55%,#fcefe8);overflow-x:hidden}
+main{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px 15px 48px;position:relative}
+.glow{position:fixed;width:230px;height:230px;border-radius:50%;background:#fff8;filter:blur(35px);pointer-events:none}
+.glow.one{top:-90px;right:-50px}.glow.two{bottom:-100px;left:-70px}
+.heart{position:fixed;bottom:-30px;color:#e8799a;opacity:.5;animation:floatUp linear infinite;pointer-events:none}
+@keyframes floatUp{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+.scene{width:min(100%,760px);position:relative;z-index:1;text-align:center}
+.kicker{letter-spacing:.22em;text-transform:uppercase;font-size:.7rem;font-weight:700;color:#b75d7b;margin-bottom:10px}
+h1{font:600 clamp(2rem,7vw,3.4rem)/1.12 'Playfair Display',serif;color:#9d4565;margin:0 0 12px}
+.subtitle{font-size:.95rem;line-height:1.7;max-width:440px;margin:0 auto 28px;color:#805364}
+.envelope-wrap{width:min(100%,390px);height:255px;margin:0 auto 22px;perspective:1000px;position:relative;filter:drop-shadow(0 18px 22px #b95c7a24)}
+.envelope{position:absolute;inset:20px 0 0;background:#f6a9bf;border-radius:8px;overflow:hidden}
+.envelope:before{content:"";position:absolute;inset:0;background:linear-gradient(145deg,#f8b8ca,#e887a5)}
+.flap{position:absolute;z-index:4;left:0;top:20px;width:100%;height:0;border-left:195px solid transparent;border-right:195px solid transparent;border-top:132px solid #d96e91;transform-origin:top;transition:transform .8s ease;filter:drop-shadow(0 3px 2px #9d45651a)}
+.pocket-left,.pocket-right,.pocket-bottom{position:absolute;z-index:3;inset:20px 0 0}
+.pocket-left{background:#f3a1ba;clip-path:polygon(0 0,53% 55%,0 100%)}
+.pocket-right{background:#e98eaa;clip-path:polygon(100% 0,47% 55%,100% 100%)}
+.pocket-bottom{background:#f8b6c8;clip-path:polygon(0 100%,50% 43%,100% 100%)}
+.seal{position:absolute;z-index:5;top:105px;left:50%;transform:translateX(-50%);width:48px;height:48px;border-radius:50%;background:#fff0f4;border:2px solid #fff8;display:grid;place-items:center;font-size:1.35rem;box-shadow:0 3px 12px #8f35552a;transition:opacity .3s,transform .3s}
+.letter-peek{position:absolute;z-index:2;left:7%;right:7%;top:35px;height:185px;background:#fffdf9;border-radius:5px 5px 0 0;transition:transform .9s ease;display:flex;align-items:flex-start;justify-content:center;padding:20px 10px;color:#c05e7f;font:600 1.15rem 'Playfair Display',serif}
+.open .flap{transform:rotateX(180deg);z-index:1}
+.open .letter-peek{transform:translateY(-105px)}
+.open .seal{opacity:0;transform:translateX(-50%) scale(.5)}
+button{border:0;background:linear-gradient(135deg,#c9577d,#a83f65);color:white;padding:14px 25px;border-radius:999px;font:700 .95rem 'DM Sans',sans-serif;box-shadow:0 8px 18px #a83f6530;cursor:pointer;transition:transform .2s,box-shadow .2s}
+button:hover{transform:translateY(-2px);box-shadow:0 12px 24px #a83f6538}
+button:focus-visible{outline:3px solid #9d4565;outline-offset:4px}
+.hint{font-size:.8rem;color:#a35d76;margin-top:12px}
+.letter-card{display:none;text-align:left;background:var(--cream);border:1px solid #f3d8e1;border-radius:16px;padding:clamp(22px,5vw,46px);margin:28px auto 0;box-shadow:0 20px 55px #9b3f5a1b;position:relative;animation:rise .7s ease both}
+.letter-card:before{content:"";position:absolute;inset:9px;border:1px solid #f5dfe6;border-radius:10px;pointer-events:none}
+.letter-card.visible{display:block}
+@keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.letter-top{text-align:center;border-bottom:1px solid #f0d9e1;padding-bottom:20px;margin-bottom:24px}
+.letter-top .tiny-heart{font-size:1.4rem}
+.letter-top h2{font:600 1.7rem 'Playfair Display',serif;color:#a34768;margin:8px 0}
+.letter-top p{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:#b8758b;margin:0}
+.letter-body{font-size:.97rem;line-height:1.9;white-space:normal}
+.letter-body p{margin:0 0 17px}
+.letter-body .promise{background:#fff0f4;border-left:3px solid #df8ca7;padding:14px 16px;border-radius:0 8px 8px 0;font-weight:600;color:#9c4665}
+.signature{font:600 1.1rem 'Playfair Display',serif;color:#a34768;margin-top:25px}
+.back-button{display:block;margin:24px auto 0;background:#fff;border:1px solid #e8b6c8;color:#a34768;box-shadow:none}
+footer{margin-top:28px;font-size:.76rem;color:#a66a80}
+@media(max-width:430px){.envelope-wrap{height:230px}.flap{border-left-width:50vw;border-right-width:50vw;border-top-width:120px}.letter-body{font-size:.92rem;line-height:1.8}.subtitle{font-size:.9rem}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="glow one"></div><div class="glow two"></div>
+<main>
+<section class="scene">
+<div class="kicker">A little letter from your person</div>
+<h1>To My Wifey, 💗</h1>
+<p class="subtitle">A little something for you, myluvy. Take a breath, tap the envelope, and open this whenever you're ready. 🥹</p>
+<div class="envelope-wrap" id="envelopeWrap" aria-label="A pink envelope">
+<div class="envelope"></div>
+<div class="letter-peek">For my wifey, with love 💌</div>
+<div class="flap"></div><div class="pocket-left"></div><div class="pocket-right"></div><div class="pocket-bottom"></div><div class="seal">💗</div>
+</div>
+<button id="openBtn" type="button">Open your letter 💌</button>
+<div class="hint" id="hint">Made with love, just for you.</div>
+
+<article class="letter-card" id="letterCard">
+<header class="letter-top"><div class="tiny-heart">💗</div><h2>My apology to you</h2><p>Read whenever you need a reminder</p></header>
+<div class="letter-body">
+<p>To my wifey, 💗</p>
+<p>Myluvy, I'm really sorry po. 🥺️</p>
+<p>Alam kong duty ka ngayon, and alam ko rin na marami kang ginagawa at iniisip habang nasa duty ka. I'm sorry kasi instead na maging comfort mo ako, nadagdagan pa yung sama ng loob mo dahil sa nangyari.</p>
+<p>Myluvy, sorry talaga kasi hindi ko nabasa yung messages mo for one hour. Hindi nag-notif yung Messenger ko, tapos nakalimutan ko ring i-check yung app. Hindi ko naman sinasadya na hindi ka pansinin, myluv. Hindi ko rin intention na iparamdam sa'yo na hindi kita priority.</p>
+<p>Pero alam mo, bebi, naiintindihan ko rin kung bakit ka nasaktan. Kahit na hindi ko naman sinasadya, alam kong masakit pa rin sa feeling na naghihintay ka ng reply ko, tapos wala kang natatanggap. I'm sorry kung naparamdam ko sa'yo na parang hindi ka importante sa akin. 😔</p>
+<p>Pero wifey, please know na importante ka sa akin. Sobra-sobra. Hindi porket hindi ako nakapag-reply agad, ibig sabihin wala akong pake sa'yo or hindi kita iniisip. You're my girl, myluv. Isa ka sa pinakamahalagang tao sa buhay ko, and the last thing I want is for you to question your importance in my life.</p>
+<p>Sorry kung may times na hindi ko naipapakita nang maayos kung gaano ka kahalaga sa akin. Alam kong hindi sapat yung sabihin ko lang na mahal kita kung may mga moments na napaparamdam ko naman sa'yo yung kabaliktaran. I know that I need to show you through my actions, hindi lang sa words ko. ️</p>
+<p>Hindi ko man sinasadya yung nangyari, responsibility ko pa rin na maging mas mindful at attentive sa messages mo. Next time, I'll make an effort na i-check yung Messenger ko, lalo na kapag hindi gumagana yung notifications ko. Ayokong lagi mong maramdaman na kailangan mo pang maghintay or mag-overthink kung importante ka ba sa akin.</p>
+<p>Myluvy, ayoko na mapaisip ka about things na ikasasakit ng utak dahil na overthink mo if you're important ba to me, You are. You deserve to feel loved, appreciated, and important. And I'm sorry kung sa nangyari ngayon, hindi ko naiparamdam sa'yo yung mga bagay na 'yon. 🥺</p>
+<p>Alam kong nasa duty ka ngayon, and I know na baka pagod ka na rin. I wish I could hug you right now, hold you close, and tell you personally kung gaano ako nagsisisi. Gusto kitang i-comfort, hindi dagdagan yung bigat ng nararamdaman mo.</p>
+<p>Hindi ko naman ine-expect na mawawala agad yung galit mo dahil lang sa apology ko. If nasaktan kita, valid yung nararamdaman mo, bebe. Hindi ko gustong balewalain yung feelings mo or sabihin sa'yo na maliit na bagay lang toh. I want to understand you, listen to you, and know kung ano yung naramdaman mo.</p>
+<p>Sorry, my baby, kasi napaisip kita kung importante ka ba sa akin. Ayokong dumating sa point na kailangan mong pagdudahan kung mahalaga ka sa buhay ko, kasi myluv, you mean so much more to me than you realize.</p>
+<p>Hindi man ako perfect na boyfriend, gusto kong matuto at mag-improve para sa atin. Ayokong puro sorry lang ako tapos uulit lang din yung mga bagay na nakakasakit sa'yo. Gusto kong patunayan sa'yo, little by little, na kaya kong maging mas understanding, mas attentive, at mas maingat sa feelings mo.</p>
+<p>Wifey, please take care of yourself habang nasa duty ka, ha? Don't forget to eat kapag may time ka, drink enough water, and rest kapag kaya mo. Kahit may tampuhan tayo ngayon, I still care about you and your well-being. I hope maging okay yung duty mo today.</p>
+<p>Mahal na mahal kita, myluvy. I'm sorry for making you feel this way. Hindi ko man mababago yung nangyari kanina, I can learn from it and do better. I want to make things right with you, not just because ayokong galit ka sa akin, but because your feelings genuinely matter to me. Hindi ko rin po talaga meant na hindi ka pansinin or anything.</p>
+<p>I know how much it hurted you and sobrang dami mo rin sigurong naisip but please wag kang mag iisip ng masama po. It was my mistake, and alam na alam ko po kung ano nagawa kong mali, i'm sorry.</p>
+<p class="promise">Please don't think na hindi ka importante sa akin, bebi. You are important. You are loved. You are someone I genuinely don't want to lose. And I'm sorry kung may nagawa ako na naging dahilan para maramdaman mo yung kabaliktaran. 💗</p>
+<p>Sorry talaga, myluv. Sana kahit papaano, maiparamdam sa'yo ng little letter na toh na sincere ako sa apology ko. Hindi man nito agad maayos yung lahat, I hope you'll know na mahal kita and I want to be better for you and for us.</p>
+<p>I love you so much, baby ko. Always take care of yourself, okay? I'm proud of you, and I'm always rooting for you. Sana kapag nabasa mo toh, kahit konti, maalala mo na may isang taong sobrang thankful na dumating ka sa buhay niya, and that person is me. 🥹️</p>
+<div class="signature">With all my love,<br>Your boyfriend na ewan. 🥺💗</div>
+</div>
+<button class="back-button" id="closeBtn" type="button">Fold the letter 💌</button>
+</article>
+<footer>Made with all my love, for myluvy. 💗</footer>
+</section>
+</main>
+<script>
+const wrap=document.getElementById('envelopeWrap');
+const openBtn=document.getElementById('openBtn');
+const card=document.getElementById('letterCard');
+const hint=document.getElementById('hint');
+function openLetter(){
+  wrap.classList.add('open');
+  openBtn.style.display='none';
+  hint.textContent='A letter from your boyfriend, with all his love. 💗';
+  window.setTimeout(()=>{card.classList.add('visible');card.scrollIntoView({behavior:'smooth',block:'start'});},450);
+}
+function closeLetter(){
+  card.classList.remove('visible');
+  wrap.classList.remove('open');
+  openBtn.style.display='inline-block';
+  hint.textContent='Made with love, just for you.';
+  document.querySelector('.scene').scrollIntoView({behavior:'smooth',block:'start'});
+}
+openBtn.addEventListener('click',openLetter);
+wrap.addEventListener('click',openLetter);
+document.getElementById('closeBtn').addEventListener('click',closeLetter);
+for(let i=0;i<13;i++){const h=document.createElement('span');h.className='heart';h.textContent=['♡','♥','💗'][i%3];h.style.left=(Math.random()*100)+'%';h.style.animationDuration=(9+Math.random()*9)+'s';h.style.animationDelay=(-Math.random()*15)+'s';h.style.fontSize=(12+Math.random()*18)+'px';document.body.appendChild(h);}
+</script>
+</body>
+</html>
